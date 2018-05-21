@@ -3,7 +3,7 @@
 include "core/autoload.php";
 
 
-// Cargamos el modulo iniciar.
+// cargamos el modulo iniciar.
 $lb = new Lb();
 $lb->loadModule("index");
 
