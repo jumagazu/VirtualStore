@@ -1,0 +1,90 @@
+------*verbos*------
+
+court  = correr
+lit = leer
+fait = hacer
+conduit = conducir
+soleil = sol
+stylo = lapicero
+boit = beber
+buvez = beber
+homme = hombre
+écris = escribir
+dort = dormir
+marche = caminar
+voiture = auto
+nage = nadar
+lisent = leer
+petit =  pequeño
+portable = celular
+clés = llave
+il y a = hay
+Combien y a-t-il de téléphones? = cuantos telefonos hay?
+assietts = platos
+chemise = camisa
+des chaussures = zapatos
+manteau = abrigo
+robe = vestido
+jupe = falda
+tee-shirt = camiseta
+qui = quien
+
+
+
+
+---números----
+
+une - un = uno
+deux = dos
+trois = tres
+quatre = cuatro
+cinq = cinco
+six = seis
+
+---------comida------
+
+pain = pan
+
+
+
+
+
+---------------personas-------------------
+policier = policia
+médecin = medico
+
+
+
+
+Le chat sont nouir
+La lune est blanche
+Les poissons sont rouges
+Le chien net court pas
+Les chats sont noirs
+Il est noir et blanc
+
+
+--------*--------------  Saludos gestos --------------------*----
+Au revoir ! = adiós
+bonjour = hola
+
+
+
+
+
+---------animales------------------------
+poisson = pescado
+chat = gato
+chien = perro
+cheval = caballo
+
+
+
+--------------*COLLORES*----------------------------
+rouge = rojo
+jaune = amarillo
+bleu = azul
+noir = negro
+blanche, blancs = blanco
+
+verte = verde
