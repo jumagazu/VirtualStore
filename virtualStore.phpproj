@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Name>virtualStore</Name>
-    <ProjectGuid>{f991d08f-a5a6-4e46-b904-609fd07d7877}</ProjectGuid>
+    <ProjectGuid>{d695a296-45d0-4149-9e00-9d8e70a2e6f0}</ProjectGuid>
     <RootNamespace>
     </RootNamespace>
     <OutputType>Library</OutputType>
@@ -340,6 +340,7 @@
     <Compile Include="PHPWebProject0.phpproj" />
     <Compile Include="README.md" />
     <Compile Include="schema.sql" />
+    <Compile Include="virtualStore.phpproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\bootstrap\css" />
