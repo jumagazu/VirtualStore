@@ -1,5 +1,5 @@
 <?php
-// El archivo autoload inicializa todos lo archivos necesarios para que el framework funcione
+// El archivo AUTOLOAD inicializa todos lo archivos necesarios para que el framework funcione
 include "core/autoload.php";
 
 
