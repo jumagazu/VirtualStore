@@ -42,7 +42,7 @@ if($p->image==""){
 
   </div>
   <div class="col-md-4">
-<h1 class="text-primary"><?php echo $coin_symbol; ?> <?php echo number_format($p->price,2,".",","); ?></h1>
+<h1 class="text-primary"><?php echo $coin_symbol; ?> <?php echo number_format($p->price); ?></h1>
 <?php 
 $in_cart=false;
 if(isset($_SESSION["cart"])){

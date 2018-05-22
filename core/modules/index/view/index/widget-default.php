@@ -86,7 +86,7 @@ if($p->image==""){
   <div class="col-md-4">
  <center>   <img src="<?php echo $img; ?>"  style="width:120px;height:120px;"></center>
   <h4 class="text-center"><?php echo $p->name; ?></h4>
-<h3 class="text-center text-primary"> <?php echo $coin_symbol." ".number_format($p->price,2,".",","); ?></h3>
+<h3 class="text-center text-primary"> <?php echo $coin_symbol." ".number_format($p->price); ?></h3>
 <?php 
 $in_cart=false;
 if(isset($_SESSION["cart"])){

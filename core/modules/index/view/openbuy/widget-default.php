@@ -54,7 +54,7 @@ $px = $p->getProduct();
 		<td><?php echo $px->getUnit()->name; ?></td>
 		<td><?php echo $px->code; ?></td>
 		<td><?php echo $px->name; ?></td>
-		<td><?php echo $coin; ?> <?php echo number_format($px->price*$p->q,2,".",","); ?></td>
+		<td><?php echo $coin; ?> <?php echo number_format($px->price*$p->q); ?></td>
 	</tr>
 
 	<?php endforeach; ?>
