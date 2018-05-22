@@ -59,7 +59,7 @@ $coin = ConfigurationData::getByPreffix("general_coin")->val;
 <br>  <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Imagen</label>
     <div class="col-lg-10">
-      <input type="file" name="image">
+      <input type="file" name="image" accept="image/jpeg, image/png">
     </div>
   </div>
 
