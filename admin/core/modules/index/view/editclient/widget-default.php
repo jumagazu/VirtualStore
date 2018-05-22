@@ -7,6 +7,48 @@ $client = ClientData::getById($_GET["client_id"]);
             <div class="col-md-12">
   <!-- Button trigger modal -->
 
+   <!-- Validaciones de los campos para el formulario de registo de usuario para el ADMIN -->
+ <!-- se valida que el nombre y apellido sean solo letras, sin caracteres especiales y con espacios -->
+ <script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz " ;
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+
+     function solonumeros(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "0123456789";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+
 
             <h2>EDITAR CLIENTE</h2>
             </div>
@@ -23,19 +65,19 @@ $client = ClientData::getById($_GET["client_id"]);
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Nombre</label>
     <div class="col-lg-10">
-      <input type="text" name="name" required value="<?php echo $client->name; ?>" class="form-control" id="inputEmail1" placeholder="Nombre">
+      <input onkeypress= "return soloLetras(event)" type="text" name="name" required value="<?php echo $client->name; ?>" class="form-control" id="inputEmail1" placeholder="Nombre" >
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Apellido</label>
     <div class="col-lg-10">
-      <input type="text" name="lastname" value="<?php echo $client->lastname; ?>" required class="form-control" id="inputEmail1" placeholder="Apellido">
+      <input onkeypress= "return soloLetras(event)" type="text" name="lastname" value="<?php echo $client->lastname; ?>" required class="form-control" id="inputEmail1" placeholder="Apellido">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Telefono</label>
     <div class="col-lg-10">
-      <input type="text" name="phone" value="<?php echo $client->phone; ?>" class="form-control" id="inputEmail1" placeholder="Telefono">
+      <input onkeypress= "return solonumeros(event)" type="text" name="phone" value="<?php echo $client->phone; ?>" class="form-control" id="inputEmail1" placeholder="Telefono">
     </div>
   </div>
   <div class="form-group">

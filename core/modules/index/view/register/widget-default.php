@@ -8,23 +8,67 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">REGISTRO DE CLIENTES</div>
 				<div class="panel-body">
+
+<script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz " ;
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+
+     function solonumeros(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "0123456789";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+
+
+
+
 <form class="form-horizontal" role="form" method="post" action="index.php?action=register">
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">*Nombre</label>
     <div class="col-lg-10">
-      <input type="text" required name="name" class="form-control" id="inputEmail1" placeholder="Nombre">
+      <input type="text" required name="name" class="form-control" id="inputEmail1" placeholder="Nombre" onkeypress= "return soloLetras(event)">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">*Apellido</label>
     <div class="col-lg-10">
-      <input type="text" required name="lastname" class="form-control" id="inputEmail1" placeholder="Apellido">
+      <input type="text" required name="lastname" class="form-control" id="inputEmail1" placeholder="Apellido" onkeypress= "return soloLetras(event)">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Telefono</label>
     <div class="col-lg-10">
-      <input type="text" name="phone" class="form-control" id="inputEmail1" placeholder="Telefono">
+      <input type="text" name="phone" class="form-control" id="inputEmail1" placeholder="Telefono" onkeypress= "return solonumeros(event)">
     </div>
   </div>
   <div class="form-group">

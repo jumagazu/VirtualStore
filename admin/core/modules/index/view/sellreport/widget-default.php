@@ -1,4 +1,5 @@
 <?php
+
 $buys = array();
 if(isset($_GET["start_at"]) && isset($_GET["finish_at"])){
 $buys =  BuyData::getByRange($_GET["start_at"],$_GET["finish_at"]);
@@ -16,9 +17,14 @@ $statuses = StatusData::getAll();
           <div class="row">
           <div class="col-md-12">
           <h1>Reporte de Ventas</h1>
+          <div class="col-md-2">
+           
+            </div>
           </div>
           </div>
 <form>
+
+
 <input type="hidden" name="view" value="sellreport">
           <div class="row">
             <div class="col-lg-2">
@@ -29,6 +35,7 @@ $statuses = StatusData::getAll();
                 <?php endforeach; ?>
             </select>-->
             </div>
+            
             <div class="col-lg-2">
             <!--<select class="form-control" name="status_id">
               <option> -- ESTADO --</option>
@@ -38,6 +45,7 @@ $statuses = StatusData::getAll();
             </select>-->
             </div>
             <div class="col-lg-3">
+             
             <input type="date" name="start_at" class="form-control">
             </div>
             <div class="col-lg-3">
@@ -49,6 +57,15 @@ $statuses = StatusData::getAll();
 
             </div>
             </form>
+
+
+
+
+            <form action="generar_excel.php" method="post" enctype="text/plain"> 
+            <input id= "btnGeneraExcel" type="submit" value="DESCARGAR .XLS" class="btn btn-primary">
+            </form>
+
+
 <br>
 <?php if(isset($_GET["start_at"]) && isset($_GET["finish_at"]) && $_GET["start_at"]!=""&&$_GET["finish_at"]!=""):
 $start_at = strtotime($_GET["start_at"]);

@@ -27,7 +27,7 @@
 			?>
 			<table class="table table-bordered table-hover">
 			<thead>
-			<th>Nombre completo</th>
+			<th>Nombre</th>
 			<th>Usuario</th>
 			<th>Email</th>
 			<th>Activo</th>

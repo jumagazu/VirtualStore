@@ -34,8 +34,8 @@ $categories = SlideData::getAll();
                         <td><?php echo $cat->title; ?></td>
                         <td style="width:90px;"><center><?php if($cat->is_public):?><i class="fa fa-check"></i><?php else: ?><i class="fa fa-remove"></i><?php endif; ?></center> </td>
                         <td style="width:90px;">
-                        <a href="index.php?view=editslide&slide_id=<?php echo $cat->id; ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
-                        <a href="index.php?action=delslide&slide_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
+                        <a " title="Editar Slide" href="index.php?view=editslide&slide_id=<?php echo $cat->id; ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
+                        <a " title="Eliminar Slide" href="index.php?action=delslide&slide_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
                         </td>
                         </tr>
 <?php endforeach; ?>

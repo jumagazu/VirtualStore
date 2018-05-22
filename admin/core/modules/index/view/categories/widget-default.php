@@ -74,17 +74,14 @@ $categories = CategoryData::getAll();
 <?php foreach($categories as $cat):?>
                         <tr>
                         <td style="width:30px;">
-                          <a href="../?view=productos&cat=<?php echo $cat->short_name; ?>" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
+                         <a " title="Editar Cliente" href="../?view=productos&cat=<?php echo $cat->short_name; ?>" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
                         </td>
                         <td><?php echo $cat->name; ?>
                         <td style="width:70px;"><?php if($cat->is_active):?><center><i class="fa fa-check"></i></center><?php endif;?></td>
 
-
-
-
                         </td>
                         <td style="width:90px;">
-                        <a data-toggle="modal" href="#myModal-<?php echo $cat->id;?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
+                        <a " title="Editar Categoria" data-toggle="modal" href="#myModal-<?php echo $cat->id;?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
   <!-- Button trigger modal -->
 
   <!-- Modal -->
@@ -131,7 +128,7 @@ $categories = CategoryData::getAll();
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-                        <a href="index.php?action=delcategory&category_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
+                        <a " title="Eliminar Categoria" href="index.php?action=delcategory&category_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
                         </td>
                         </tr>
 <?php endforeach; ?>

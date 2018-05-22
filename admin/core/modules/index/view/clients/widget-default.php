@@ -34,8 +34,8 @@ $categories = ClientData::getAll();
                         <td><?php echo $cat->getFullname(); ?></td>
                         <td><?php echo $cat->email; ?></td>
                         <td style="width:90px;">
-                        <a href="index.php?view=editclient&client_id=<?php echo $cat->id; ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
-                        <a href="index.php?action=delclient&client_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
+                        <a " title="Editar Cliente" href="index.php?view=editclient&client_id=<?php echo $cat->id; ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
+                        <a " title="Eliminar Cliente" href="index.php?action=delclient&client_id=<?php echo $cat->id; ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a> 
                         </td>
                         </tr>
 <?php endforeach; ?>
