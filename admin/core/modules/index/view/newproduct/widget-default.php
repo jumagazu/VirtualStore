@@ -6,6 +6,48 @@ $coin = ConfigurationData::getByPreffix("general_coin")->val;
           <div class="row">
             <div class="col-md-12">
   <!-- Button trigger modal -->
+  
+ <!-- Validaciones de los campos para el formulario de registo de usuario para el ADMIN -->
+ <!-- se valida que el nombre y apellido sean solo letras, sin caracteres especiales y con espacios -->
+ <script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz " ;
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+
+     function solonumeros(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "0123456789";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
 
 
             <h2>NUEVO PRODUCTO</h2>
@@ -43,7 +85,7 @@ $coin = ConfigurationData::getByPreffix("general_coin")->val;
     <div class="col-lg-10">
       <div class="input-group">
   <span class="input-group-addon"><?php echo $coin; ?></span>
-  <input type="text" class="form-control" placeholder="Precio" required name="price">
+  <input type="text" class="form-control" placeholder="Precio" required name="price" onkeypress= "return solonumeros(event)">
 </div>    </div>
   </div>
   <div class="form-group">
